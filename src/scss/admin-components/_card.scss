@@ -66,6 +66,10 @@
 
   .card-media {
     @include font-size(.9375rem);
+
+    .text-muted {
+      padding-left: 1px;
+    }
   }
 
   .card-btn {
