@@ -1,0 +1,83 @@
+.edge-top {
+  &::before {
+    content: '';
+    background: rgba($cyan, .3);
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.edge-top-angle {
+  clip-path: polygon(0 $edge-height, 100% 0, 100% 100%, 0% 100%);
+
+  @include media-breakpoint-down('sm') {
+    clip-path: polygon(0 $edge-height-mobile, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba($cyan, .3);
+    clip-path: polygon(0 $edge-height, 100% 0, 100% 2px, 0 calc(#{$edge-height} + 2px));
+    height: calc(#{$edge-height} + 2px);
+
+    @include media-breakpoint-down('sm') {
+      clip-path: polygon(0 $edge-height-mobile, 100% 0, 100% 2px, 0 calc(#{$edge-height-mobile} + 2px));
+      height: calc(#{$edge-height-mobile} + 2px);
+    }
+  }
+}
+
+.edge-top-angle-reverse {
+  clip-path: polygon(0 0, 100% $edge-height, 100% 100%, 0 100%);
+
+  @include media-breakpoint-down('sm') {
+    clip-path: polygon(0 0, 100% $edge-height-mobile, 100% 100%, 0 100%);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba($cyan, .3);
+    clip-path: polygon(0 0, 100% $edge-height, 100% calc(#{$edge-height} + 2px), 0 2px);
+    height: calc(#{$edge-height} + 2px);
+
+    @include media-breakpoint-down('sm') {
+      clip-path: polygon(0 0, 100% $edge-height-mobile, 100% calc(#{$edge-height-mobile} + 2px), 0 2px);
+      height: calc(#{$edge-height-mobile} + 2px);
+    }
+  }
+}
+
+.edge-top-pentagon {
+  clip-path: polygon(50% $edge-height, 100% 0, 100% 100%, 0 100%, 0 0);
+
+  @include media-breakpoint-down('sm') {
+    clip-path: polygon(50% $edge-height-mobile, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba($cyan, .3);
+    clip-path: polygon(0 0, 50% $edge-height, 100% 0, 100% 2px, 50% calc(#{$edge-height} + 2px), 0 2px);
+    height: calc(#{$edge-height} + 2px);
+
+    @include media-breakpoint-down('sm') {
+      clip-path: polygon(0 0, 50% $edge-height-mobile, 100% 0, 100% 2px, 50% calc(#{$edge-height-mobile} + 2px), 0 2px);
+      height: calc(#{$edge-height-mobile} + 2px);
+    }
+  }
+}

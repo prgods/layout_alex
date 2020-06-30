@@ -1,0 +1,37 @@
+{% extends "main-layout.html" %}
+
+{% set pageTitle = 'Register 2' %}
+{% set contentClass = 'd-flex flex-column justify-content-xl-center bg-reg content-reg-2' %}
+
+{% block content %}
+<div class="bg-image content-image"></div>
+<div class="w-100">
+  <div class="row row-cols-1 row-cols-md-2 position-relative flex-grow">
+    <div class="col ml-auto">
+      <section class="card max-w-md mx-auto mr-md-0 ml-md-auto mb-0 card-form card-form-reg-blog">
+        <div class="card-header card-header-alt">
+          <h3 class="h3 mb-0">Регистрация блогера</h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label class="text-uppercase card-form-label">Ваш TikTok аккаунт</label>
+              <input class="form-control form-control-lg card-form-control" type="text" name="" placeholder="https://" />
+            </div>
+            <p class="card-text mb-4 mb-md-2 mb-xl-4 pt-2 text-gray card-text-hint">Укажите ссылку на&nbsp;свой профиль, либо введите @имя_пользователя</p>
+            <div class="mt-4_25 mt-md-3 mt-xl-4_25 pb-2 pb-md-0">
+              <button type="submit" class="btn btn-lg btn-primary rounded-pill btn-block btn-icon-right card-btn">
+                <span>Продолжить</span>
+                <span class="btn-icon">
+                  <i class="align-self-center" data-feather="chevron-right"></i>
+                </span>
+              </button>
+              <div class="mt-4 mt-md-3 mt-xl-4 text-center mb-xl-n2_5 card-text"><span class="mr-2 mr-md-3 mr-xl-4">Уже есть аккаунт?</span> <a class="pseudolink" href="">Войти</a></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+{% endblock %}

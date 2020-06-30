@@ -1,0 +1,173 @@
+.bg-gradient {
+  background-color: rgb(22,5,80);
+  background-image: linear-gradient(30deg, rgba(22,5,80,1) 0%, rgba(60,6,95,1) 75%, rgba(56,9,106,1) 100%);
+}
+
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: auto;
+}
+
+
+.bg-form-default {
+  .bg-image {
+    background-image: url(../img/bg-form-desktop.png);
+
+    @include media-breakpoint-down('lg') {
+      background-image: url(../img/bg-form-tablet.png);
+    }
+
+    @include media-breakpoint-down('sm') {
+      background-image: url(../img/bg-form-mobile.png);
+    }
+  }
+}
+
+.bg-reset,
+.bg-login,
+.bg-reg {
+  @extend .bg-gradient;
+  @extend .bg-form-default;
+  position: relative;
+}
+
+
+.bg-contact {
+  @extend .bg-gradient;
+  position: relative;
+
+  .bg-image {
+    background-image: url(../img/bg-contact-desktop.png);
+
+    @include media-breakpoint-down('lg') {
+      background-image: url(../img/bg-contact-tablet.png);
+    }
+
+    @include media-breakpoint-down('sm') {
+      background-image: url(../img/bg-contact-mobile.png);
+      background-position: center bottom;
+    }
+  }
+}
+
+
+.bg-hero-01 {
+  background-image: url(../img/index_ill_1_2560x950.jpg);
+  background-position: center $header-height;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-down('lg') {
+    background-image: url(../img/index_ill_1_1200x450.jpg);
+    background-position: center $header-height-tablet;
+  }
+
+  @include media-breakpoint-down('sm') {
+    background-image: url(../img/index_ill_1_768x365.jpg);
+    background-position: center $header-height-mobile;
+  }
+}
+
+
+.bg-hero-02 {
+  @extend .bg-gradient;
+
+  .bg-image {
+    background-image: url(../img/bg-hero-02-desktop.png);
+
+    @include media-breakpoint-down('lg') {
+      background-image: url(../img/bg-hero-02-tablet.png);
+    }
+
+    @include media-breakpoint-down('sm') {
+      background-image: url(../img/bg-hero-02-mobile.png);
+      background-position: center top;
+    }
+  }
+}
+
+
+.bg-hero-03 {
+  @extend .bg-gradient;
+
+  .bg-image {
+    background-image: url(../img/bg-hero-03-desktop.png);
+
+    @include media-breakpoint-down('lg') {
+      background-image: url(../img/bg-hero-03-tablet.png);
+    }
+
+    @include media-breakpoint-down('sm') {
+      background-image: url(../img/bg-hero-03-mobile.png);
+      background-position: center top;
+    }
+  }
+}
+
+
+.bg-hero-04 {
+  background-color: $cyan-dark;
+
+  .bg-image {
+    background-image: url(../img/bg-hero-04-desktop.jpg);
+    background-position: center bottom;
+
+    @include media-breakpoint-down('lg') {
+      background-image: url(../img/bg-hero-04-tablet.jpg);
+      background-position: left bottom;
+    }
+
+    @include media-breakpoint-down('sm') {
+      background-image: url(../img/bg-hero-04-mobile.jpg);
+      background-position: center bottom;
+    }
+  }
+}
+
+
+.bg-hero-05 {
+  @extend .bg-gradient;
+
+  .bg-image {
+    background-image: url(../img/bg-hero-05-desktop.png);
+
+    @include media-breakpoint-down('lg') {
+      background-image: url(../img/bg-hero-05-tablet.png);
+    }
+
+    @include media-breakpoint-down('sm') {
+      background-image: url(../img/bg-hero-05-mobile.png);
+      background-position: center top;
+    }
+  }
+}
+
+
+.bg-hero-06 {
+  background-color: #086668;
+
+  .bg-image {
+    background-image: url(../img/bg-hero-06-desktop.png);
+    background-position: center bottom;
+
+    @include media-breakpoint-down('lg') {
+      background-image: url(../img/bg-hero-06-tablet.png);
+    }
+
+    @include media-breakpoint-down('sm') {
+      background-image: url(../img/bg-hero-06-mobile.png);
+    }
+  }
+}
+
+
+.bg-blue-dark {
+ background-color: $blue-dark !important;
+}

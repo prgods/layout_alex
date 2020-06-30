@@ -1,0 +1,50 @@
+{% extends "main-layout-wide.html" %}
+
+{% set pageTitle = 'Main help' %}
+{% set contentClass = 'py-0' %}
+
+{% block content %}
+<section class="help-section">
+  <header class="help-header bg-blue-dark pt-3_25 pt-md-3_25 pt-xl-4_25">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-3 text-center text-md-left">
+          <h3 class="h3 mb-2 mb-md-0 typo-title-responsive text-white">Частные вопросы:</h3>
+        </div>
+        <div class="col-12 col-md-9">
+          <ul class="nav nav-tabs nav-tabs-alt help-nav" role="tablist">
+            <li class="nav-item"><a class="nav-link overflow-hidden active" href="#tab-blog" data-toggle="tab" role="tab">Блогерам</a></li>
+            <li class="nav-item"><a class="nav-link overflow-hidden" href="#tab-adv" data-toggle="tab" role="tab">Рекламодателям</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="tab-content py-4_25 py-md-3_25 py-xl-4_5">
+    <div class="tab-pane active" id="tab-blog" role="tabpanel">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            {% include 'main-includes/help/help-sidenav-01.html' %}
+          </div>
+          <div class="col-12 col-md-9">
+            {% include 'main-includes/help/help-content-01.html' %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab-adv" role="tabpanel">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            {% include 'main-includes/help/help-sidenav-01.html' %}
+          </div>
+          <div class="col-12 col-md-9">
+            {% include 'main-includes/help/help-content-01.html' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,79 @@
+<div class="header-holder">
+  <nav class="navbar navbar-expand navbar-dark bg-black header fixed-top">
+    <div class="container-fluid header-container">
+      <a class="sidebar-toggle d-flex d-md-none mr-2">
+        <i class="hamburger align-self-center"></i>
+        {# <svg class="align-self-center text-primary" xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22"><path data-name="icon_menu_mob" d="M18.5 22h-17A1.5 1.5 0 010 20.5 1.5 1.5 0 011.5 19h17a1.5 1.5 0 011.5 1.5 1.5 1.5 0 01-1.5 1.5zM25 11a1.5 1.5 0 00-1.5-1.5h-22A1.5 1.5 0 000 11a1.5 1.5 0 001.5 1.5h22A1.5 1.5 0 0025 11zm0-9.5A1.5 1.5 0 0023.5 0h-22A1.5 1.5 0 000 1.5 1.5 1.5 0 001.5 3h22A1.5 1.5 0 0025 1.5z" fill="currentColor"/></svg> #}
+      </a>
+      <a class="navbar-brand" href="index.html">
+        <img class="align-middle" src="img/prgods-logo.svg" alt="" height="50">
+        <span class="align-middle sr-only">PRGods</span>
+      </a>
+
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav navbar-nav-center align-items-center mx-auto d-none d-md-flex">
+          <li class="nav-item">
+            <a class="nav-link" href="">Помощь</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Контакты</a>
+          </li>
+        </ul>
+        {% if not isAuth %}
+        <div class="align-items-center d-none d-md-flex">
+          <a class="nav-link d-inline-flex align-items-center text-primary" href="#">
+            <svg class="icon text-primary mr-md-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22"><path data-name="icon_profile" d="M11 0a11 11 0 1011 11A11 11 0 0011 0zm0 3.16a3.29 3.29 0 11-3.29 3.29A3.29 3.29 0 0111 3.16zm0 15.7a7.85 7.85 0 01-6.52-3.48c0-2.18 4.38-3.33 6.53-3.34s6.53 1.26 6.57 3.31A7.85 7.85 0 0111 18.86z" fill="#02cdd1"/></svg>
+            <!--img src="img/icon-profile.svg" class="rounded-circle avatar mr-md-2 flex-shrink-0" alt="" /-->
+            <span class="font-weight-semibold d-none d-md-inline">Войти</span>
+          </a>
+          <a class="btn btn-primary header-btn px-3_5 px-lg-4_5 ml-2" href="">Регистрация</a>
+        </div>
+        {% endif %}
+        <ul class="navbar-nav align-items-center ml-auto ml-lg-0">
+          {% if not isAuth %}
+          <li class="nav-item dropdown d-md-none">
+            <a class="nav-icon dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+              <svg class="icon text-primary flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="22" height="22"><path data-name="icon_profile" d="M11 0a11 11 0 1011 11A11 11 0 0011 0zm0 3.16a3.29 3.29 0 11-3.29 3.29A3.29 3.29 0 0111 3.16zm0 15.7a7.85 7.85 0 01-6.52-3.48c0-2.18 4.38-3.33 6.53-3.34s6.53 1.26 6.57 3.31A7.85 7.85 0 0111 18.86z" fill="#02cdd1"/></svg>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Войти</a>
+              <a class="dropdown-item" href="#">Регистрация</a>
+            </div>
+          </li>
+          {% else %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-inline-flex align-items-center" href="#" data-toggle="dropdown">
+              <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded-circle mr-md-2" alt="Chris Wood" />
+              <span class="text-white d-none d-md-inline">Chris Wood</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">Личный кабинет</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Выйти</a>
+            </div>
+          </li>
+          {% endif %}
+          <li class="nav-item dropdown dropdown-flag position-relative">
+            <a class="nav-flag dropdown-toggle" href="#" id="languageDropdown" data-toggle="dropdown">
+              <img class="border border-black" src="img/flags/ru.svg" alt="Русский" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-dark" aria-labelledby="languageDropdown">
+              <a class="dropdown-item d-flex align-items-center pr-0 active" href="#">
+                <span class="align-middle flex-grow-1">Русский</span>
+                <span class="dropdown-icon ml-0">
+                <img class="rounded-circle" src="img/flags/ru.svg" alt="Русский" width="20" />
+              </span>
+              </a>
+              <a class="dropdown-item d-flex align-items-center pr-0" href="#">
+                <span class="align-middle flex-grow-1">English</span>
+                <span class="dropdown-icon ml-0">
+                <img class="rounded-circle" src="img/flags/us.svg" alt="English" width="20" />
+              </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

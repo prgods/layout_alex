@@ -1,0 +1,17 @@
+.hamburger {
+  &,
+  &::before,
+  &::after {
+    border-radius: 1.5px;
+    height: 3px;
+    background: var(--primary);
+  }
+
+  &::before {
+    top: -8px;
+  }
+
+  &::after {
+    bottom: -8px;
+  }
+}

@@ -1,0 +1,230 @@
+.btn-gradient-1 {
+  color: $white;
+  background-color: #fd49a8;
+  background-image: linear-gradient(to right, #fd49a8, #ffc149);
+  box-shadow: 0 2px 3px 0 rgba($black, .75);
+  text-shadow: 0 1px 0 rgba($black, .75);
+  border: none;
+
+  @include hover() {
+    color: $white;
+    background-image: linear-gradient(to right, #fd49a8, #ffc149);
+  }
+
+  &:focus,
+  &.focus {
+    color: $white;
+    background-image: linear-gradient(to right, #fd49a8, #ffc149);
+    box-shadow: 0 2px 3px 0 rgba($black, .75);
+  }
+}
+
+
+.btn-gradient-2 {
+  color: #2c0659;
+  background-color: #00e2ff;
+  background-image: linear-gradient(to right, #00e2ff, #02cdd1);
+  box-shadow: 0 2px 3px 0 rgba($black, .75);
+  border: none;
+
+  @include hover() {
+    color: #2c0659;
+    background-image: linear-gradient(to right, #00e2ff, #02cdd1);
+  }
+
+  &:focus,
+  &.focus {
+    color: #2c0659;
+    background-image: linear-gradient(to right, #00e2ff, #02cdd1);
+    box-shadow: 0 2px 3px 0 rgba($black, .75);
+  }
+}
+
+
+.btn-h-100 {
+  height: 6.25rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.btn-icon-right,
+.btn-icon-left {
+  position: relative;
+
+  .btn-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $input-height;
+    height: $input-height;
+
+    svg,
+    .feather,
+    .icon {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.btn-icon-right {
+  .btn-icon {
+    right: 0;
+  }
+}
+
+.btn-icon-left {
+  .btn-icon {
+    left: 0;
+  }
+}
+
+
+.btn-icon-right.btn-lg,
+.btn-icon-left.btn-lg {
+  padding-right: $input-height-lg;
+  padding-left: $input-height-lg;
+
+  .btn-icon {
+    width: $input-height-lg;
+    height: $input-height-lg;
+
+    svg,
+    .feather {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+
+.btn-icon-right.btn-h-100,
+.btn-icon-left.btn-h-100 {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+
+  .btn-icon {
+    width: 6.25rem;
+    height: 6.25rem;
+
+    svg,
+    .feather,
+    .icon {
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+  }
+}
+
+
+.btn-responsive {
+  @include media-breakpoint-down('lg') {
+    @include font-size(.9375rem);
+    line-height: 1;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  @include media-breakpoint-down('sm') {
+    @include font-size(1.1875rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &.btn-lg.btn-icon-left,
+  &.btn-lg.btn-icon-right {
+    @include media-breakpoint-down('lg') {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      //padding-left: 3.125rem;
+      //padding-right: 3.125rem;
+    }
+
+    .btn-icon {
+      @include media-breakpoint-down('lg') {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      @include media-breakpoint-down('sm') {
+        width: 3.125rem;
+        height: 3.125rem;
+      }
+
+      svg,
+      .feather,
+      .icon {
+        @include media-breakpoint-down('lg') {
+          width: 1rem;
+          height: 1rem;
+        }
+
+        @include media-breakpoint-down('sm') {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &.btn-h-100 {
+    @include media-breakpoint-down('lg') {
+      height: 4rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      height: 6.25rem;
+    }
+  }
+
+  &.btn-h-100.btn-icon-left,
+  &.btn-h-100.btn-icon-right {
+    @include media-breakpoint-down('lg') {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding-left: 3.75rem;
+      padding-right: 3.75rem;
+    }
+
+    .btn-icon {
+      @include media-breakpoint-down('lg') {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      @include media-breakpoint-down('sm') {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+
+      svg,
+      .feather,
+      .icon {
+        @include media-breakpoint-down('lg') {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        @include media-breakpoint-down('sm') {
+          width: 3.125rem;
+          height: 3.125rem;
+        }
+      }
+    }
+  }
+}

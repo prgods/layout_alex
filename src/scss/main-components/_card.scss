@@ -1,0 +1,218 @@
+.card {
+  .card-header-alt {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: $card-spacer-x;
+      right: $card-spacer-x;
+      height: 1px;
+      bottom: 0;
+      background-color: $border-color;
+    }
+  }
+
+  .card-header:not(.card-header-alt) + .card-body,
+  .card-header:not(.card-header-alt) + .card-footer {
+    padding-top: 0;
+  }
+
+  .card-header-alt + .card-body,
+  .card-header-alt + .card-footer {
+    padding-top: 1.5rem;
+
+    @include media-breakpoint-down('lg') {
+      padding-top: .75rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding-top: 1.5rem;
+    }
+  }
+}
+
+
+.card-form {
+  .card-header {
+    @include media-breakpoint-down('lg') {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .h3 {
+      @extend .typo-title-responsive;
+    }
+  }
+
+  .card-header-alt {
+    &::before {
+      @include media-breakpoint-down('lg') {
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+
+      @include media-breakpoint-down('sm') {
+        left: 1rem;
+        right: 1rem;
+      }
+    }
+  }
+
+  .card-body {
+    @include media-breakpoint-down('lg') {
+      padding: 1.5rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding: 1rem;
+    }
+  }
+
+  .card-text {
+    @extend .typo-text-responsive;
+  }
+
+  .card-btn {
+    @extend .btn-responsive;
+  }
+
+  .card-form-control {
+    @extend .form-control-responsive;
+  }
+
+  .card-form-label {
+    @extend .form-label-responsive;
+  }
+
+  .card-social-wrap {
+    .icon {
+      @include media-breakpoint-down('sm') {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+
+  .card-or {
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 1px;
+      background-color: $border-color;
+      width: 50%;
+    }
+
+    &::before {
+      margin-left: -50%;
+    }
+
+    &::after {
+      margin-right: -50%;
+    }
+
+    .card-text {
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+
+    @include media-breakpoint-between('md', 'lg') {
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .form-group {
+    @include media-breakpoint-between('md', 'lg') {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &.max-w-md {
+    @include media-breakpoint-down('sm') {
+      max-width: 100%;
+    }
+  }
+}
+
+
+.help-card {
+  .card-header {
+    padding: .625rem .75rem .625rem 2.5rem;
+    line-height: 1.375rem;
+
+    @include media-breakpoint-between('md', 'lg') {
+      padding-left: 1.6875rem;
+    }
+  }
+
+  .card-body {
+    padding: .375rem .75rem .75rem;
+
+    @include media-breakpoint-between('md', 'lg') {
+      padding: 0 .625rem .625rem;
+    }
+  }
+
+  .card-text {
+    @extend .typo-text-responsive;
+
+    @include media-breakpoint-up('xl') {
+      @include font-size(1.0625rem);
+      line-height: 1.375rem;
+    }
+  }
+
+  .help-card-toggle {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-size: 50% 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: escape-svg($help-card-toggle-icon-active);
+
+      @include media-breakpoint-between('md', 'lg') {
+        width: 1.6875rem;
+        height: 2.1875rem;
+      }
+    }
+
+    &.collapsed::before {
+      background-image: escape-svg($help-card-toggle-icon);
+    }
+  }
+}
+
+.card-form-reg-blog {
+  .card-text-hint {
+    max-width: 20rem;
+
+    @include media-breakpoint-down('lg') {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.help {
+  &-header {
+  }
+
+  &-nav {
+    position: relative;
+    top: -1px;
+    border-bottom: none;
+
+    .nav-item {
+      width: 33.333%;
+
+      @include media-breakpoint-down('sm') {
+        width: 50%;
+      }
+    }
+  }
+}

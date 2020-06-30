@@ -1,0 +1,11 @@
+:root {
+  --header-height: #{$header-height};
+  --header-height-tablet: #{$header-height-tablet};
+  --header-height-mobile: #{$header-height-mobile};
+
+  --sidebar-width: #{$sidebar-width};
+  --sidebar-width-mobile: #{$sidebar-width-mobile};
+
+  --font-family-sans-serif: #{inspect($font-family-sans-serif)};
+  --font-family-alt: #{inspect($font-family-alt)};
+}

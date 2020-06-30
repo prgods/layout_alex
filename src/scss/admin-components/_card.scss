@@ -1,0 +1,74 @@
+.profile-card,
+.finance-card {
+  .card-header,
+  .card-body {
+    padding: 1.5rem;
+
+    @include media-breakpoint-down('sm') {
+      padding: 1.25rem 1rem;
+    }
+  }
+
+  .card-actions,
+  .card-list {
+    &.leading-1 {
+      @include media-breakpoint-down('sm') {
+        line-height: 1rem;
+      }
+    }
+
+    .feather {
+      width: 1.25rem;
+      height: 1.25rem;
+
+      @include media-breakpoint-down('sm') {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  .card-actions,
+  .card-media-user,
+  .h4,
+  .h5 {
+    @include media-breakpoint-down('lg') {
+      @include font-size(.875rem);
+    }
+  }
+
+  .card-list {
+    @include media-breakpoint-down('sm') {
+      @include font-size(.75rem);
+    }
+  }
+}
+
+.profile-card {
+  .card-avatar {
+    @include media-breakpoint-down('sm') {
+      max-width: 127px;
+      max-height: 127px;
+    }
+  }
+
+  .card-media-user {
+    img {
+      width: 4rem;
+      height: 4rem;
+
+      @include media-breakpoint-down('sm') {
+        width: 3.125rem;
+        height: 3.125rem;
+      }
+    }
+  }
+
+  .card-media {
+    @include font-size(.9375rem);
+  }
+
+  .card-btn {
+    @extend .btn-responsive;
+  }
+}

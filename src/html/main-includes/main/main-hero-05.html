@@ -1,0 +1,28 @@
+{% set items = [
+  { number: '22&nbsp;407', text: 'Рекламных площадок' },
+  { number: '242&nbsp;520&nbsp;460', text: 'Охват по&nbsp;показам' },
+  { number: '7&nbsp;035&nbsp;000', text: 'Вложено в&nbsp;рекламу и&nbsp;выплачено блогерам' },
+] %}
+
+<section class="jumbotron jumbotron-fluid main-hero main-hero-05 bg-hero-05 mb-0 cover-background">
+  <div class="main-hero-overlay d-flex flex-column justify-content-end justify-content-md-center text-center">
+    <div class="main-hero-image-space"></div>
+    <div class="container-fluid">
+      <div class="row justify-content-end main-hero-row">
+        <div class="col-12 col-md-6 main-hero-col">
+          <h2 class="text-primary display-5 main-hero-display">О&nbsp;нас в&nbsp;цифрах</h2>
+          <p class="text-white main-hero-text"><strong class="text-nowrap">500&nbsp;000&nbsp;000</strong> просмотров роликов в&nbsp;месяц, <strong class="text-nowrap">40&nbsp;000</strong>&nbsp;площадок, около <strong class="text-nowrap">1000</strong> рекламодателей</p>
+          <div class="main-hero-stat-list">
+            {% for item in items %}
+            <div class="main-hero-stat d-flex flex-column justify-content-center rounded">
+              <h3 class="text-primary main-hero-display display-5 mb-0">{{item.number}}</h3>
+              <p class="main-hero-text text-white mb-0">{{item.text}}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-hero-image bg-image"></div>
+</section>

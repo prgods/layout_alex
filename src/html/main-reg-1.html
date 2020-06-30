@@ -1,0 +1,42 @@
+{% extends "main-layout.html" %}
+
+{% set pageTitle = 'Register 1' %}
+{% set contentClass = 'd-flex flex-column justify-content-xl-center bg-reg content-reg-1' %}
+
+{% block content %}
+<div class="bg-image content-image"></div>
+<div class="w-100">
+  <div class="row row-cols-1 row-cols-md-2 position-relative flex-grow">
+    <div class="col ml-auto">
+      <section class="card max-w-md mx-auto mr-md-0 ml-md-auto mb-0 card-form">
+        <div class="card-header card-header-alt">
+          <h3 class="h3 mb-0">Регистрация</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text mt-n1_5 mt-md-0 mb-3_5 mb-md-2 mb-xl-4 text-gray">Выберите тип аккаунта, который подходит вам.</p>
+          <a class="btn btn-primary w-100 btn-icon-right card-btn btn-h-100 text-left pl-3 pl-md-2_5 pl-xl-4_25" href="">
+            <span class="d-flex flex-column">
+              <span class="h3 mb-0 text-uppercase typo-title-responsive text-nowrap">Я блогер</span>
+              <span class="typo-text-responsive">Хочу выполнять заказы рекламодателей за вознаграждение</span>
+            </span>
+            <span class="btn-icon">
+              <svg class="align-self-center icon" xmlns="http://www.w3.org/2000/svg" width="27" height="50" viewBox="0 0 27 50"><path data-name="arrow_button_big" d="M23.28 25L.5 2.58A1.5 1.5 0 01.5.44a1.57 1.57 0 012.18 0l22.7 22.29.13.13.87.86a1.57 1.57 0 010 2.56l-.88.87L2.67 49.57a1.57 1.57 0 01-2.18 0 1.5 1.5 0 010-2.14z"/></svg>
+            </span>
+          </a>
+          <div class="card-or"><span class="card-text">или</span></div>
+          <a class="btn btn-primary w-100 btn-icon-right card-btn btn-h-100 text-left pl-3 pl-md-2_5 pl-xl-4_25" href="">
+            <span class="d-flex flex-column">
+              <span class="h3 mb-0 text-uppercase typo-title-responsive text-nowrap">Я рекламодатель</span>
+              <span class="typo-text-responsive">Ищу блогеров для продвижения моих продуктов или услуг.</span>
+            </span>
+            <span class="btn-icon">
+              <svg class="align-self-center icon" xmlns="http://www.w3.org/2000/svg" width="27" height="50" viewBox="0 0 27 50"><path data-name="arrow_button_big" d="M23.28 25L.5 2.58A1.5 1.5 0 01.5.44a1.57 1.57 0 012.18 0l22.7 22.29.13.13.87.86a1.57 1.57 0 010 2.56l-.88.87L2.67 49.57a1.57 1.57 0 01-2.18 0 1.5 1.5 0 010-2.14z"/></svg>
+            </span>
+          </a>
+          <div class="mt-2_5 mt-md-3 mt-xl-4 text-center mb-xl-n2_5 card-text"><span class="mr-2 mr-md-3 mr-xl-4">Уже есть аккаунт?</span> <a class="pseudolink" href="">Войти</a></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+{% endblock %}

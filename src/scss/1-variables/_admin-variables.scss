@@ -1,0 +1,326 @@
+// Colors
+
+$white: #fff;
+$gray-100: #fafafa;
+$gray-150: #f5f5f5;
+$gray-200: #eee;
+//$gray-300: #dee2e6 !default;
+$gray-400: #cdcdcd;
+//$gray-500: #adb5bd !default;
+$gray-550: #888;
+$gray-600: #666;
+$gray-700: #494949;
+$gray-800: #343b4c;
+$gray-900: #242D3D;
+$black: #000;
+
+$cyan: #02cdd1;
+$cyan-dark: #02a4a7;
+$primary: $cyan;
+$blue-dark: #150550;
+
+$grays: ();
+$grays: map-merge(
+    (
+      "100": $gray-100,
+      "150": $gray-150,
+      "200": $gray-200,
+      //"300": $gray-300,
+      "400": $gray-400,
+      //"500": $gray-500,
+      "550": $gray-550,
+      "600": $gray-600,
+      "700": $gray-700,
+      "800": $gray-800,
+      "900": $gray-900,
+    ),
+    $grays
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "gray": $gray-600,
+  "black": $black,
+  "white": $white,
+);
+
+$text-muted: $gray-550;
+
+
+// Grid
+
+$grid-columns:                12;
+$grid-gutter-width:           20px;
+$grid-row-columns:            6;
+
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+);
+
+
+// Grid containers
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+
+// Fonts
+
+$font-family-sans-serif: 'Lato', Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$font-family-alt: 'Arista', Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+$font-size-base: 1.0625rem;
+$font-size-lg: 1.2352rem;
+$font-size-sm: .875rem;
+
+$line-height-base: 1.47;
+$line-height-lg: 1.1764;
+$line-height-sm: 1.1764;
+$font-weight-base: 400;
+
+
+// Spacing
+
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+    (
+      0: 0,
+      1: ($spacer * .25), // 4px
+      1_5: ($spacer * .375), // 6px
+      2: ($spacer * .5), // 8px
+      2_25: ($spacer * .625), // 10px
+      2_5: ($spacer * .75), // 12px
+      2_75: ($spacer * .875), // 14px
+      3: $spacer, // 16px
+      3_25: ($spacer * 1.125), // 18px
+      3_5: ($spacer * 1.25), // 20px
+      4: ($spacer * 1.5), // 24px
+      4_25: ($spacer * 1.875), // 30px
+      4_5: ($spacer * 2.25), // 36px
+      4_75: ($spacer * 2.625), // 40px
+      //5: ($spacer * 3), // 48px
+      //6: ($spacer * 4.5), // 72px
+      //7: ($spacer * 6) // 96px
+    ),
+    $spacers
+);
+
+
+// Body
+
+$body-bg: $gray-100;
+$body-color: $gray-700;
+$link-hover-decoration: none;
+
+
+// Typo
+
+$h1-font-size:                1.6875rem; // 27px
+$h2-font-size:                1.6875rem; // 27px
+$h3-font-size:                1.6875rem; // 27px
+$h4-font-size:                1.1875rem; // 19px
+$h5-font-size:                1.0625rem; // 17px
+$h6-font-size:                1.0625rem; // 17px
+
+$headings-margin-bottom:      $spacer / 2;
+$headings-font-family:        null;
+$headings-font-weight:        600;
+$headings-line-height:        1.19;
+$headings-color:              inherit;
+
+
+// Border
+
+$border-width: 1px;
+$border-radius: .25rem;
+$border-color: $gray-200;
+
+
+// Navbar
+
+$navbar-padding-y: $spacer * 0.875;
+$navbar-padding-x: $spacer * 1.25;
+$navbar-nav-link-padding-x: .75rem;
+$navbar-border-bottom: 0;
+$navbar-box-shadow: 0 0 .25rem 0 rgba($black, .1);
+
+//$navbar-dark-color: $white;
+$navbar-light-color: $gray-550;
+
+////$navbar-dark-hover-color:          rgba($black, .7) !default;
+////$navbar-dark-active-color:         rgba($black, .9) !default;
+////$navbar-dark-disabled-color:       rgba($black, .3) !default;
+////$navbar-dark-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+////$navbar-dark-toggler-border-color: rgba($black, .1) !default;
+
+
+// Sidebar
+
+$sidebar-width: 325px;
+$sidebar-width-mobile: 228px;
+$sidebar-bg: $white;
+
+// Sidebar brand
+$sidebar-brand-padding-y: 2rem;
+$sidebar-brand-padding-x: 2rem;
+
+// Sidebar link
+$sidebar-link-padding: 1.15rem 3rem 1.15rem 2rem;
+$sidebar-link-font-weight: 700;
+$sidebar-link-color: $gray-700;
+$sidebar-link-bg: $sidebar-bg;
+$sidebar-link-hover-color: $gray-700;
+$sidebar-link-hover-bg: $gray-150;
+$sidebar-link-hover-font-weight: $sidebar-link-font-weight;
+$sidebar-link-active-color: $gray-700;
+$sidebar-link-active-bg: $gray-150;
+$sidebar-link-active-font-weight: $sidebar-link-font-weight;
+
+// Sidebar child link
+$sidebar-link-child-padding: 1.1rem 2rem;
+$sidebar-link-child-font-weight: 700;
+$sidebar-link-child-color: $gray-700;
+$sidebar-link-child-bg: $sidebar-bg;
+$sidebar-link-child-hover-color: $gray-700;
+$sidebar-link-child-hover-bg: $gray-150;
+$sidebar-link-child-active-color: $gray-700;
+$sidebar-link-child-active-bg: $gray-150;
+
+// Sidebar child link nested
+$sidebar-link-child-second-padding: 0;
+$sidebar-link-child-third-padding: 0;
+
+// Sidebar link icon
+$sidebar-link-icon-color: $primary;
+$sidebar-link-icon-hover-color: $primary;
+$sidebar-link-icon-active-color: $primary;
+
+
+// Hamburger
+
+$hamburger-width-top: 25px;
+$hamburger-width-middle: 25px;
+$hamburger-width-bottom: 20px;
+
+
+// Header
+
+$header-height: 5.25rem;
+$header-height-tablet: 3.75rem;
+$header-height-mobile: 3.125rem;
+
+
+// Buttons + Forms
+
+$input-btn-padding-y:         .5rem;
+$input-btn-padding-x:         1rem;
+$input-btn-font-family:       null;
+$input-btn-font-size:         $font-size-base;
+$input-btn-line-height:       $line-height-base;
+
+$input-btn-padding-y-lg:      .75rem;
+$input-btn-padding-x-lg:      1.25rem;
+$input-btn-font-size-lg:      $font-size-lg;
+$input-btn-line-height-lg:    $line-height-lg;
+
+$input-btn-padding-y-sm:      .375rem;
+$input-btn-padding-x-sm:      1.25rem;
+$input-btn-font-size-sm:      1rem;
+$input-btn-line-height-sm:    $line-height-sm;
+
+$input-btn-border-width:      $border-width;
+
+
+// Buttons
+
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+$btn-font-family:             $input-btn-font-family;
+$btn-font-size:               $input-btn-font-size;
+$btn-line-height:             $input-btn-line-height;
+$btn-white-space:             null; // Set to `nowrap` to prevent text wrapping
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg;
+$btn-padding-x-lg:            $input-btn-padding-x-lg;
+$btn-font-size-lg:            $input-btn-font-size-lg;
+$btn-line-height-lg:          $input-btn-line-height-lg;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm;
+$btn-padding-x-sm:            $input-btn-padding-x-sm;
+$btn-font-size-sm:            $input-btn-font-size-sm;
+$btn-line-height-sm:          $input-btn-line-height-sm;
+
+$btn-border-width:            $input-btn-border-width;
+$btn-font-weight:             700;
+$btn-border-radius:           $border-radius;
+
+
+// Forms
+
+$label-margin-bottom:                   .75rem;
+
+$input-padding-y:                       $input-btn-padding-y;
+$input-padding-x:                       $input-btn-padding-x;
+$input-font-family:                     $input-btn-font-family;
+$input-font-size:                       $input-btn-font-size;
+$input-font-weight:                     $font-weight-base;
+$input-line-height:                     $input-btn-line-height;
+
+$input-padding-y-lg:                    $input-btn-padding-y-lg;
+$input-padding-x-lg:                    $input-btn-padding-x-lg;
+$input-font-size-lg:                    1.125rem;
+$input-line-height-lg:                  1.333;
+
+//$input-padding-y-sm:                    $input-btn-padding-y-sm;
+//$input-padding-x-sm:                    $input-btn-padding-x-sm;
+//$input-font-size-sm:                    1.125rem;
+//$input-line-height-sm:                  1.333;
+
+$input-bg:                              $white;
+//$input-disabled-bg:                     $gray-200 !default;
+
+$input-color:                           $gray-700;
+$input-border-color:                    $gray-400;
+$input-border-width:                    $input-btn-border-width;
+
+$input-border-radius:                   $border-radius;
+
+$input-placeholder-color:               $gray-600;
+
+$input-height-border:                   $input-border-width * 2;
+
+$input-height-inner:                    add($input-line-height * 1em, $input-padding-y * 2);
+
+$input-height:                          add($input-line-height * 1em, add($input-padding-y * 2, $input-height-border, false));
+$input-height-lg:                       add($input-line-height-lg * 1em, add($input-padding-y-lg * 2, $input-height-border, false));
+
+
+// Cards
+
+$card-spacer-y: .75rem;
+$card-spacer-x: 1.25rem;
+$card-border-radius: .25rem;
+$card-inner-border-radius: $card-border-radius;
+$card-border-width: 0;
+$card-border-color: transparent;
+$card-cap-bg: $white;
+$card-shadow: 0 0 .25rem 0 rgba($black, .1);
+$card-title-font-weight: 500;
+
+
+// Content
+
+$content-padding: 3.125rem;

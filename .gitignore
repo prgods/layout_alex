@@ -1,0 +1,11 @@
+.npmrc
+.DS_Store
+.sass-cache
+dist
+Desktop.ini
+node_modules
+npm-debug.log
+.vscode/
+.idea
+package-lock.json
+yarn.lock

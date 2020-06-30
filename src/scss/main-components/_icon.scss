@@ -1,0 +1,25 @@
+.icon {
+  display: inline-flex;
+  vertical-align: middle;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+
+.icon-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+
+.icon-responsive {
+  @include media-breakpoint-down('lg') {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  @include media-breakpoint-down('sm') {
+    width: 3rem;
+    height: 3rem;
+  }
+}

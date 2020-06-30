@@ -1,0 +1,248 @@
+.sidebar {
+  z-index: 1030;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    background-color: $border-color;
+    z-index: 1;
+  }
+
+
+  @include media-breakpoint-down('sm') {
+    min-width: $sidebar-width-mobile;
+    max-width: $sidebar-width-mobile;
+  }
+
+  .sidebar-brand {
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    background-color: $sidebar-bg;
+
+    @include media-breakpoint-down('lg') {
+      height: $header-height-tablet;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      height: $header-height-mobile;
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+
+    img {
+      position: relative;
+      top: -.3rem;
+      height: 2.5rem;
+
+      @include media-breakpoint-down('lg') {
+        height: 2rem;
+      }
+
+      @include media-breakpoint-down('sm') {
+        height: 1.875rem;
+      }
+    }
+  }
+
+  .sidebar-link,
+  a.sidebar-link {
+    @include font-size(1.125rem);
+    line-height: 1.11;
+    display: flex;
+
+    @include media-breakpoint-down('sm') {
+      @include font-size(.9375rem);
+      line-height: 1;
+      padding: .75rem 2rem .75rem 1rem;
+    }
+
+    i,
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+      margin-right: 1.25rem;
+      opacity: 1;
+      flex-shrink: 0;
+      transform: scale(1.15);
+      position: relative;
+      top: -1px;
+
+
+      @include media-breakpoint-down('sm') {
+        width: 1rem;
+        height: 1rem;
+        margin-right: .75rem;
+      }
+    }
+  }
+
+  a.sidebar-link:hover {
+    i,
+    svg {
+      opacity: 1;
+    }
+  }
+
+  [data-toggle="collapse"]::before {
+    padding: 4px;
+    border-color: var(--primary);
+    right: 2rem;
+
+    @include media-breakpoint-down('sm') {
+      top: .75rem;
+      right: 1rem;
+    }
+  }
+}
+
+
+.sidebar-sticky {
+  .sidebar-content {
+    overflow-y: auto;
+
+    @include media-breakpoint-down('sm') {
+      width: $sidebar-width-mobile;
+    }
+  }
+}
+
+
+.sidebar-toggle {
+  width: 25px;
+  height: 22px;
+
+  &:hover {
+    .hamburger,
+    .hamburger:before,
+    .hamburger:after {
+      background: var(--primary);
+    }
+  }
+}
+
+
+.sidebar {
+  //margin-left: -$sidebar-width;
+
+  .sidebar-content {
+    //left: -$sidebar-width;
+  }
+
+  //&.toggled {
+  //  margin-left: 0;
+  //
+  //  .sidebar-content {
+  //    left: 0;
+  //  }
+  //}
+
+  &-collapsed {
+    //margin-left: 0;
+
+    .sidebar-content {
+      //left: 0;
+    }
+
+    &.toggled {
+      //margin-left: -$sidebar-width;
+
+      .sidebar-content {
+        //left: -$sidebar-width;
+      }
+    }
+  }
+
+  &.toggled {
+    @include media-breakpoint-down('sm') {
+      margin-left: -$sidebar-width-mobile;
+    }
+
+    .sidebar-content {
+      @include media-breakpoint-down('sm') {
+        left: -$sidebar-width-mobile;
+      }
+    }
+  }
+
+  // Workaround for IE bug, more info:
+  // https://stackoverflow.com/a/25850649
+  @media (min-width: 1px) and (max-width: #{map-get($grid-breakpoints, 'md') - .02px}) {
+    margin-left: -$sidebar-width-mobile;
+
+    .sidebar-content {
+      left: -$sidebar-width-mobile;
+    }
+
+    &.toggled {
+      margin-left: 0;
+
+      .sidebar-content {
+        left: 0;
+      }
+    }
+
+    &-collapsed {
+      //margin-left: 0;
+
+      .sidebar-content {
+        //left: 0;
+      }
+
+      &.toggled {
+        //margin-left: -$sidebar-width-mobile;
+
+        .sidebar-content {
+          //left: -$sidebar-width-mobile;
+        }
+      }
+    }
+  }
+}
+
+
+.sidebar-bottom {
+  @include media-breakpoint-down('sm') {
+    min-width: $sidebar-width-mobile;
+    max-width: $sidebar-width-mobile;
+  }
+
+  .sidebar.toggled & {
+    @include media-breakpoint-down('sm') {
+      margin-left: -$sidebar-width-mobile;
+    }
+  }
+}
+
+.sidebar-open {
+  overflow: hidden;
+}
+
+.sidebar + .main .navbar.fixed-top {
+  transition: $sidebar-transition;
+}
+
+.sidebar:not(.sidebar-collapsed):not(.toggled) + .main .navbar.fixed-top {
+  @include media-breakpoint-up('lg') {
+    margin-left: $sidebar-width;
+  }
+}
+
+.sidebar:not(.sidebar-collapsed).toggled + .main .navbar.fixed-top {
+  margin-left: $sidebar-width;
+
+  @include media-breakpoint-up('lg') {
+    margin-left: 0;
+  }
+
+  @include media-breakpoint-down('sm') {
+    margin-left: $sidebar-width-mobile;
+  }
+}

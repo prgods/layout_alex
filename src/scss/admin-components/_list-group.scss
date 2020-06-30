@@ -1,0 +1,21 @@
+.finance-list-group-item {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @include media-breakpoint-down('sm') {
+    padding: 1.25rem 1rem;
+    @include font-size(.75rem);
+  }
+
+  .icon-wrapper {
+    width: 2.875rem;
+    height: 2.875rem;
+
+    @include media-breakpoint-down('sm') {
+      width: 2.1875rem;
+      height: 2.1875rem;
+    }
+  }
+}

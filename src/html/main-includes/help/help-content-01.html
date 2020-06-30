@@ -1,0 +1,33 @@
+<article class="help-section mt-2_5 mt-md-0">
+  <h4 class="h4 mb-0 help-title  typo-title-responsive">Интеграция</h4>
+  <div class="accordion help-accordion my-4 my-md-3 my-lg-4" id="help-accordion">
+    <section class="card help-card shadow-none border my-2_25 my-md-1_5 my-lg-2_25 rounded">
+      <div class="card-header position-relative" id="help-heading-02">
+        <h5 class="h5 mb-0 typo-title-responsive">
+          <a class="help-card-toggle stretched-link collapsed" data-toggle="collapse" href="#help-collapse-02" aria-expanded="true" aria-controls="help-collapse-02">
+            Предоставление статистики
+          </a>
+        </h5>
+      </div>
+      <div id="help-collapse-02" class="collapse help-collapse" aria-labelledby="help-heading-02" data-parent="#help-accordion">
+        <div class="card-body">
+          {% include './help-card-text.html' %}
+        </div>
+      </div>
+    </section>
+    <section class="card help-card shadow-none border my-2_25 my-md-1_5 my-lg-2_25 rounded">
+      <div class="card-header position-relative" id="help-heading-01">
+        <h5 class="h5 mb-0 typo-title-responsive">
+          <a class="help-card-toggle stretched-link" data-toggle="collapse" href="#help-collapse-01" aria-expanded="true" aria-controls="help-collapse-01">
+            Как работает формат “Товар за обзор”?
+          </a>
+        </h5>
+      </div>
+      <div id="help-collapse-01" class="collapse help-collapse show" aria-labelledby="help-heading-01" data-parent="#help-accordion">
+        <div class="card-body">
+          {% include './help-card-text.html' %}
+        </div>
+      </div>
+    </section>
+  </div>
+</article>

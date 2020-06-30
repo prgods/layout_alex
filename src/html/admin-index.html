@@ -1,0 +1,16 @@
+{% extends "admin-layout.html" %}
+
+{% set pageTitle = 'Cabinet page' %}
+{% set contentClass = '' %}
+
+{% block content %}
+  <h3 class="h3 mb-2_5 mb-md-4 font-weight-normal typo-title-responsive page-title">Личный кабинет</h3>
+  <div class="row content-row">
+    <div class="col-12 col-md-6 col-xxl-4 d-flex pr-md-2_5 pr-xl-3_25">
+      {% include 'admin-includes/cabinet/profile-card.html' %}
+    </div>
+    <div class="col-12 col-md-6 col-xxl-8 d-flex pl-md-2_5 pl-xl-3_25">
+      {% include 'admin-includes/cabinet/finance-card.html' %}
+    </div>
+  </div>
+{% endblock %}

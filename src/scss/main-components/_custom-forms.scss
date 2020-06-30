@@ -1,0 +1,80 @@
+// Range
+
+//.custom-range {
+//  overflow: hidden;
+//  -webkit-appearance: none;
+//  background: $custom-range-track-bg;
+//  border-radius: 10rem;
+//  height: $custom-range-track-height;
+//
+//  &::-webkit-slider-thumb {
+//    background: $custom-range-track-bg;
+//    box-shadow: -100em 0 0 100em $custom-range-track-bg-fill;
+//  }
+//
+//  &::-moz-range-progress {
+//    background-color: $custom-range-track-bg-fill;
+//  }
+//
+//  &::-moz-range-track {
+//    background-color: $custom-range-track-bg;
+//  }
+//
+//  &::-ms-fill-lower {
+//    background-color: $custom-range-track-bg-fill;
+//  }
+//
+//  &::-ms-fill-upper {
+//    background-color: $custom-range-track-bg;
+//  }
+//}
+
+.custom-range-responsive {
+  @include media-breakpoint-between('md', 'lg') {
+    height: $custom-range-thumb-height-tablet;
+  }
+
+  &::-webkit-slider-thumb {
+    @include media-breakpoint-between('md', 'lg') {
+      width: $custom-range-thumb-width-tablet;
+      height: $custom-range-thumb-height-tablet;
+      margin-top: ($custom-range-track-height-tablet - $custom-range-thumb-height-tablet) / 2;
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include media-breakpoint-between('md', 'lg') {
+      height: $custom-range-track-height-tablet;
+    }
+  }
+
+  &::-moz-range-thumb {
+    @include media-breakpoint-between('md', 'lg') {
+      width: $custom-range-thumb-width-tablet;
+      height: $custom-range-thumb-height-tablet;
+    }
+  }
+
+  &::-moz-range-track {
+    @include media-breakpoint-between('md', 'lg') {
+      height: $custom-range-track-height-tablet;
+    }
+  }
+
+  &::-ms-thumb {
+    @include media-breakpoint-between('md', 'lg') {
+      width: $custom-range-thumb-width-tablet;
+      height: $custom-range-thumb-height-tablet;
+      margin-right: $custom-range-thumb-focus-box-shadow-width;
+      margin-left: $custom-range-thumb-focus-box-shadow-width;
+    }
+  }
+
+  &::-ms-track {
+    @include media-breakpoint-between('md', 'lg') {
+      height: $custom-range-track-height-tablet;
+      border-width: $custom-range-thumb-height-tablet / 2;
+    }
+  }
+}
+

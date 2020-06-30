@@ -1,0 +1,55 @@
+.tab-alt .nav-tabs,
+.nav-tabs-alt {
+  //background-color: var(--primary);
+  border-top-left-radius: calc(#{$border-radius} + 1px);
+  border-top-right-radius: calc(#{$border-radius} + 1px);
+
+  .nav-link {
+    @include font-size($h3-font-size);
+    font-weight: $headings-font-weight;
+    line-height: 1;
+    padding: 1.25rem 2.5rem;
+    text-align: center;
+
+    @include media-breakpoint-down('lg') {
+      @include font-size($h5-font-size);
+      padding: .75rem 1rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      @include font-size(.9375rem);
+      padding-top: 1.75rem;
+      padding-bottom: 1.75rem;
+    }
+
+    &:not(.active),
+    &:not(.active):hover,
+    &:not(.active):focus {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+
+  .nav-item:not(:first-child) .nav-link {
+    border-top-left-radius: 0;
+  }
+
+  .nav-item:not(:last-child) .nav-link {
+    border-top-right-radius: 0;
+  }
+}
+
+
+.tab-alt .tab-content {
+  padding: 2.5rem;
+  box-shadow: 0 0 4px 0 rgba($black, 0.1);
+
+  @include media-breakpoint-down('lg') {
+    padding: 1.5rem;
+  }
+
+  @include media-breakpoint-down('sm') {
+    padding: 2rem 1rem;
+  }
+}

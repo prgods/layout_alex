@@ -1,0 +1,33 @@
+.form-control-responsive {
+  @include media-breakpoint-down('lg') {
+    @include font-size(.8125rem);
+    line-height: 1;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    height: add(1 * 1em, add(.5rem * 2, 1px, false));
+  }
+
+  @include media-breakpoint-down('sm') {
+    @include font-size(.9375rem);
+    line-height: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: add(1 * 1em, add(1rem * 2, 1px, false));
+  }
+}
+
+.form-label-responsive {
+  @include media-breakpoint-down('lg') {
+    @include font-size(.8125rem);
+    margin-bottom: .5rem;
+  }
+
+  @include media-breakpoint-down('sm') {
+    @include font-size(.9375rem);
+    margin-bottom: .75rem;
+  }
+}

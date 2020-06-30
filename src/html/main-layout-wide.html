@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% block title %}{{ pageTitle | title }}{% endblock %}</title>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body class=" {{ bodyClass }}">
+<div class="wrapper">
+  {% block sidebar %}
+    {% include 'main-includes/shared/sidebar.html' %}
+  {% endblock %}
+  <div class="main d-flex flex-column h-100">
+    {% block header %}
+      {% include 'main-includes/shared/header.html' %}
+    {% endblock %}
+    <main class="content px-0 flex-grow-1 {{ contentClass }}">
+      <div class="content-container">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    {% block footer %}
+      {% include 'main-includes/shared/footer.html' %}
+    {% endblock %}
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

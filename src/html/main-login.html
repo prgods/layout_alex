@@ -1,0 +1,50 @@
+{% extends "main-layout.html" %}
+
+{% set pageTitle = 'Login' %}
+{% set contentClass = 'd-flex flex-column justify-content-xl-center bg-login content-login' %}
+
+{% block content %}
+<div class="bg-image content-image"></div>
+<div class="w-100">
+  <div class="row row-cols-1 row-cols-md-2 position-relative flex-grow">
+    <div class="col ml-auto">
+      <section class="card max-w-md mx-auto mr-md-0 ml-md-auto mb-0 card-form">
+        <div class="card-header card-header-alt">
+          <h3 class="h3 mb-0">Авторизация</h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group text-center">
+              <div class="d-inline-flex flex-column">
+                <label class="text-uppercase card-form-label" for="">Авторизируйтесь через</label>
+                {% include 'main-includes/form/social.html' %}
+              </div>
+            </div>
+            <div class="card-or"><span class="card-text">или</span></div>
+            <div class="form-group">
+              <label class="text-uppercase card-form-label">Email</label>
+              <input class="form-control form-control-lg card-form-control" type="email" name="" placeholder="Email" />
+            </div>
+            <div class="form-group">
+              <div class="d-flex align-items-baseline flex-nowrap">
+                <label class="text-uppercase card-form-label flex-grow-1">Пароль</label>
+                <span class="card-text"><a class="pseudolink" href="">Забыли пароль?</a></span>
+              </div>
+              <input class="form-control form-control-lg card-form-control" type="password" name="" placeholder="Пароль" />
+            </div>
+            <div class="mt-4_25 mt-md-3 mt-xl-4_25 pb-2 pb-md-0">
+              <button type="submit" class="btn btn-lg btn-primary rounded-pill btn-block btn-icon-right card-btn">
+                <span>Авторизоваться</span>
+                <span class="btn-icon">
+                 <i class="align-self-center" data-feather="chevron-right"></i>
+               </span>
+              </button>
+              <div class="mt-4 mt-md-3 mt-xl-4 text-center mb-xl-n2_5 card-text"><span class="mr-2 mr-md-3 mr-xl-4">Еще не с нами?</span> <a class="pseudolink" href="">Зарегистрируйтесь</a></div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+{% endblock %}

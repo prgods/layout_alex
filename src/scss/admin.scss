@@ -1,0 +1,145 @@
+// fonts
+@import "admin-components/fonts";
+
+// bootstrap
+@import "~bootstrap/scss/functions";
+
+// theme variables
+@import "1-variables/admin-variables";
+@import "1-variables/app";
+
+@import "~bootstrap/scss/variables";
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+//@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+//@import "~bootstrap/scss/button-group";
+//@import "~bootstrap/scss/input-group";
+//@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+//@import "~bootstrap/scss/breadcrumb";
+//@import "~bootstrap/scss/pagination";
+//@import "~bootstrap/scss/badge";
+//@import "~bootstrap/scss/jumbotron";
+//@import "~bootstrap/scss/alert";
+//@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+//@import "~bootstrap/scss/close";
+//@import "~bootstrap/scss/toasts";
+//@import "~bootstrap/scss/modal";
+//@import "~bootstrap/scss/tooltip";
+//@import "~bootstrap/scss/popover";
+//@import "~bootstrap/scss/carousel";
+//@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+// Theme mixins
+@import "2-mixins/button";
+//@import "2-mixins/modal";
+//@import "2-mixins/switch";
+//@import "2-mixins/tabs";
+//@import "2-mixins/wizard";
+
+// Theme components
+//@import "3-components/accordion";
+//@import "3-components/alert";
+@import "3-components/avatar";
+//@import "3-components/badge";
+@import "3-components/buttons";
+@import "3-components/card";
+//@import "3-components/chart";
+@import "3-components/dropdown";
+@import "3-components/feather";
+//@import "3-components/footer";
+@import "3-components/forms";
+@import "3-components/hamburger";
+//@import "3-components/landing";
+//@import "3-components/modal";
+@import "3-components/navbar";
+@import "3-components/reboot";
+//@import "3-components/progress";
+@import "3-components/sidebar";
+@import "3-components/sizing";
+@import "3-components/tables";
+//@import "3-components/tabs";
+//@import "3-components/timeline";
+@import "3-components/type";
+@import "3-components/wrapper";
+@import "3-components/content";
+@import "3-components/main";
+//@import "3-components/settings";
+@import "3-components/ie";
+
+// Theme utilities
+@import "4-utilities/borders";
+//@import "4-utilities/cursors";
+@import "4-utilities/overflow";
+@import "4-utilities/position";
+
+// 3rd party plugins
+//@import "~apexcharts/src/assets/apexcharts";
+//@import "~bootstrap-daterangepicker/daterangepicker";
+//@import "~bootstrap-markdown/css/bootstrap-markdown.min";
+//@import "~datatables.net-bs4/css/dataTables.bootstrap4";
+//@import "~datatables.net-buttons-bs4/css/buttons.bootstrap4";
+//@import "~datatables.net-responsive-bs4/css/responsive.bootstrap4";
+//@import "~dragula/dist/dragula";
+//@import "~jvectormap-next/jquery-jvectormap";
+//@import "~quill/dist/quill.bubble";
+//@import "~quill/dist/quill.snow";
+//@import "~select2/src/scss/core";
+//@import "~simplebar/dist/simplebar";
+//@import "~smartwizard/dist/css/smart_wizard";
+//@import "~smartwizard/dist/css/smart_wizard_theme_arrows";
+//@import "~tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4";
+//@import "~toastr/toastr";
+//@import "~fullcalendar/dist/fullcalendar";
+//@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+//@import "~@fortawesome/fontawesome-free/scss/regular";
+//@import "~@fortawesome/fontawesome-free/scss/solid";
+//@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// 3rd party plugin styles
+//@import "5-vendor/datatables-select";
+//@import "5-vendor/datetimepicker";
+//@import "5-vendor/fullcalendar";
+//@import "5-vendor/highlight";
+//@import "5-vendor/markdown";
+//@import "5-vendor/quill";
+//@import "5-vendor/select2";
+//@import "5-vendor/simplebar";
+//@import "5-vendor/toastr";
+//@import "5-vendor/wizard";
+
+// Admin components
+@import "admin-components/root";
+@import "admin-components/mixins";
+@import "admin-components/common";
+@import "admin-components/grid";
+@import "admin-components/type";
+@import "admin-components/sizing";
+@import "admin-components/content";
+@import "admin-components/dropdown";
+@import "admin-components/header";
+@import "admin-components/sidebar";
+@import "admin-components/hamburger";
+@import "admin-components/card";
+@import "admin-components/buttons";
+@import "admin-components/forms";
+@import "admin-components/icon";
+@import "admin-components/price";
+@import "admin-components/list-group";
+@import "admin-components/main";

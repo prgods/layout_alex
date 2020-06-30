@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% block title %}{{ pageTitle | title }}{% endblock %}</title>
+  <link href="css/admin.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+  {% block sidebar %}
+    {% include 'admin-includes/shared/sidebar.html' %}
+  {% endblock %}
+  <div class="main d-flex flex-column h-100">
+    {% block header %}
+      {% include 'admin-includes/shared/header.html' %}
+    {% endblock %}
+    <main class="content flex-grow-1 {{ contentClass }}">
+      <div class="container-fluid p-0 content-container">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+</div>
+<script src="js/admin.js"></script>
+</body>
+</html>

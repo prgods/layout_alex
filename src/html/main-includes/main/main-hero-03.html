@@ -1,0 +1,44 @@
+{% set items = [
+'Создайте свой профиль на&nbsp;платформе, чтобы заявить о&nbsp;себе брендам.',
+'Участвуйте в&nbsp;рекламных кампаниях крупных и&nbsp;начинающих брендов: создавайте качественный контент, публикуйте креативные видео, собирайте лайки и&nbsp;комментарии.',
+'Получайте гонорар и&nbsp;интересные бонусы.',
+'Развивайте свой аккаунт и&nbsp;зарабатывайте еще больше!',
+'Участвуйте в&nbsp;партнерской программе и&nbsp;получайте процент с&nbsp;дохода приведенных блогеров.',
+'Подключите уведомления и&nbsp;всегда будьте в&nbsp;курсе новых предложений.',
+'Все сделки безопасные и&nbsp;без комиссий.',
+] %}
+
+<section class="jumbotron jumbotron-fluid main-hero main-hero-03 bg-hero-03 mb-0">
+  <div class="main-hero-overlay d-flex flex-column justify-content-end justify-content-md-center">
+    <div class="main-hero-image-space"></div>
+    <div class="container-fluid">
+      <div class="row main-hero-row">
+        <div class="col-12 col-md-6 col-xl-5 position-static main-hero-col">
+          <h3 class="text-white main-hero-title">Блогеру</h3>
+          <ul class="typo-list typo-list-primary typo-list-check-outline main-hero-list text-white ">
+            <li>{{ items[0] }}</li>
+            <div class="collapse main-hero-collapse" id="main-hero-collapse-03">
+              {% for index, item in items %}
+              {% if index != 0 %}
+              <li>{{ item }}</li>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </ul>
+          <div class="main-hero-more d-md-none mt-n2_5 collapsed" data-toggle="collapse" data-target="#main-hero-collapse-03">
+            <span class="pseudolink dropdown-toggle text-primary">Читать далее</span>
+          </div>
+          <div class="main-hero-footer">
+            <a class="btn btn-lg rounded-pill btn-icon-right btn-gradient-2 stretched-link main-hero-btn" href="">
+              <span>Начать зарабатывать</span>
+              <span class="btn-icon">
+              <i class="align-self-center" data-feather="chevron-right"></i>
+            </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-hero-image bg-image"></div>
+</section>

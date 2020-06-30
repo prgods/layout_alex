@@ -1,0 +1,122 @@
+<div class="header-holder">
+  <nav class="navbar navbar-expand navbar-light bg-white header fixed-top">
+    <a class="sidebar-toggle d-flex mr-2">
+      <i class="hamburger align-self-center"></i>
+      {# <svg class="align-self-center text-primary" xmlns="http://www.w3.org/2000/svg" width="25" height="22" viewBox="0 0 25 22"><path data-name="icon_menu_mob" d="M18.5 22h-17A1.5 1.5 0 010 20.5 1.5 1.5 0 011.5 19h17a1.5 1.5 0 011.5 1.5 1.5 1.5 0 01-1.5 1.5zM25 11a1.5 1.5 0 00-1.5-1.5h-22A1.5 1.5 0 000 11a1.5 1.5 0 001.5 1.5h22A1.5 1.5 0 0025 11zm0-9.5A1.5 1.5 0 0023.5 0h-22A1.5 1.5 0 000 1.5 1.5 1.5 0 001.5 3h22A1.5 1.5 0 0025 1.5z"  fill="currentColor"/></svg> #}
+    </a>
+    <div class="navbar-collapse collapse">
+      <ul class="navbar-nav ml-auto align-items-center">
+        <li class="nav-item dropdown nav-item-sep">
+          <a class="nav-link dropdown-toggle d-inline-flex align-items-center pr-md-4_5" href="#" data-toggle="dropdown">
+          <span class="d-inline-flex flex-column align-items-end">
+            <span class="price text-nowrap font-weight-bold header-price"><span class="text-primary price-num">891</span><span class="price-currency">P</span></span>
+            <small class="header-price-text">Доступный баланс</small>
+          </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="pages-profile.html"><i class="align-middle mr-1" data-feather="user"></i> Profile</a>
+            <a class="dropdown-item" href="#"><i class="align-middle mr-1" data-feather="pie-chart"></i> Analytics</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="pages-settings.html">Settings & Privacy</a>
+            <a class="dropdown-item" href="#">Help</a>
+            <a class="dropdown-item" href="#">Sign out</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown dropdown-flag position-relative">
+          <a class="nav-flag dropdown-toggle" href="#" id="languageDropdown" data-toggle="dropdown">
+            <img class="border border-black" src="img/flags/ru.svg" alt="Русский" />
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+            <a class="dropdown-item d-flex align-items-center pr-0 active" href="#">
+              <span class="align-middle flex-grow-1">Русский</span>
+              <span class="dropdown-icon ml-0">
+                <img class="rounded-circle" src="img/flags/ru.svg" alt="Русский" width="20" />
+              </span>
+            </a>
+            <a class="dropdown-item d-flex align-items-center pr-0" href="#">
+              <span class="align-middle flex-grow-1">English</span>
+              <span class="dropdown-icon ml-0">
+                <img class="rounded-circle" src="img/flags/us.svg" alt="English" width="20" />
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown nav-item-sep">
+          <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-toggle="dropdown">
+            <div class="position-relative">
+              <i class="align-middle" data-feather="bell"></i>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0" aria-labelledby="alertsDropdown">
+            <div class="dropdown-menu-header">
+              4 New Notifications
+            </div>
+            <div class="list-group">
+              <a href="#" class="list-group-item">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-2">
+                    <i class="text-danger" data-feather="alert-circle"></i>
+                  </div>
+                  <div class="col-10">
+                    <div class="text-dark">Update completed</div>
+                    <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                    <div class="text-muted small mt-1">2h ago</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-2">
+                    <i class="text-warning" data-feather="bell"></i>
+                  </div>
+                  <div class="col-10">
+                    <div class="text-dark">Lorem ipsum</div>
+                    <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                    <div class="text-muted small mt-1">6h ago</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-2">
+                    <i class="text-primary" data-feather="home"></i>
+                  </div>
+                  <div class="col-10">
+                    <div class="text-dark">Login from 192.186.1.1</div>
+                    <div class="text-muted small mt-1">8h ago</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item">
+                <div class="row no-gutters align-items-center">
+                  <div class="col-2">
+                    <i class="text-success" data-feather="user-plus"></i>
+                  </div>
+                  <div class="col-10">
+                    <div class="text-dark">New connection</div>
+                    <div class="text-muted small mt-1">Anna accepted your request.</div>
+                    <div class="text-muted small mt-1">12h ago</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="dropdown-menu-footer">
+              <a href="#" class="text-muted">Show all notifications</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-inline-flex align-items-center" href="#" data-toggle="dropdown">
+            <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded-circle mr-md-2" alt="Chris Wood" />
+            <span class="text-body font-weight-bold d-none d-md-inline">Chris Wood</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">Личный кабинет</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Выйти</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

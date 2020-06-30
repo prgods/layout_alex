@@ -1,0 +1,60 @@
+{% extends "main-layout.html" %}
+
+{% set pageTitle = 'Reset password' %}
+{% set contentClass = 'd-flex flex-column justify-content-xl-center bg-contact content-contact' %}
+
+{% block content %}
+<div class="bg-image content-image"></div>
+<div class="row no-gutters row-cols-1 row-cols-md-2 position-relative flex-grow-1">
+  <div class="col order-md-last">
+    <section class="card max-w-md mx-auto mr-md-0 ml-md-auto mb-0 card-form">
+      <div class="card-header">
+        <h3 class="h3 mb-0">Обратная связь</h3>
+      </div>
+      <div class="card-body pt-4 pt-md-2_5 pt-xl-4">
+        <form>
+          <div class="form-group">
+            <label class="text-uppercase card-form-label">Ваш вопрос</label>
+            <textarea class="form-control form-control-lg card-form-control js-autosize" name="" id="" cols="30" rows="3" placeholder="Чем мы можем вам помочь?"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="text-uppercase card-form-label">Ваше имя</label>
+            <input class="form-control form-control-lg card-form-control" type="text" name="" placeholder="Ваше имя" />
+          </div>
+          <div class="form-group">
+            <label class="text-uppercase card-form-label">Email</label>
+            <input class="form-control form-control-lg card-form-control" type="email" name="" placeholder="Email" />
+          </div>
+          <div class="mt-4_25 mt-md-3 mt-xl-4_25 pb-2 pb-md-0">
+            <button type="submit" class="btn btn-lg btn-primary rounded-pill btn-block btn-icon-right card-btn">
+              <span>Отправить вопрос</span>
+              <span class="btn-icon">
+                 <i class="align-self-center" data-feather="chevron-right"></i>
+               </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="content-image-spacer d-md-none"></div>
+  <div class="col d-flex flex-column justify-content-end justify-content-md-start">
+    <section>
+      <h3 class="text-white mb-0 pt-4_25 pt-md-2_5 pt-xl-3_5 typo-title-responsive">Контакты</h3>
+      <p class="media my-3_5 my-md-3_75 my-xl-3_5 align-items-center">
+        <svg class="icon icon-email mr-3_5 mr-md-2_75 mr-xl-3_5 text-primary icon-responsive" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path data-name="icon_email" d="M24 0a24 24 0 1024 24A24 24 0 0024 0zm13.49 31.07a2.36 2.36 0 01-2.6 2.57h-22a2.33 2.33 0 01-2.41-2.38V16.74a2.34 2.34 0 012.41-2.39H35a2.35 2.35 0 012.46 2.48q.03 7.17.03 14.24zm-3.41-12.42l.41-.3v12.29h-21V18.36c.16.11.28.18.39.27q4.86 3.82 9.72 7.65a.52.52 0 00.79 0q4.84-3.84 9.69-7.63z" /></svg>
+        <span class="media-body d-flex flex-column typo-text-responsive">
+          <span><a href="mailto:tiktok@mail.ru">tiktok@mail.ru</a></span>
+          <span><a href="mailto:tiktok123@mail.ru">tiktok123@mail.ru</a></span>
+        </span>
+      </p>
+      <p class="media my-3_5 my-md-3_75 my-xl-3_5 align-items-center">
+        <svg class="icon icon-instagram mr-3_5 mr-md-2_75 mr-xl-3_5 icon-responsive" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><defs><linearGradient id="a" x1="7.03" y1="40.97" x2="40.97" y2="7.03" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fec053"/><stop offset=".33" stop-color="#f2203e"/><stop offset=".65" stop-color="#b729a8"/><stop offset="1" stop-color="#5342d6"/></linearGradient></defs><rect width="48" height="48" rx="24" ry="24" fill="url(#a)"/><path d="M33.68 24A9.68 9.68 0 1024 33.68 9.67 9.67 0 0033.68 24zm-.18-11a1.56 1.56 0 101.56 1.56A1.56 1.56 0 0033.5 13zm-17.4-2.24h15.82a5.33 5.33 0 015.32 5.32V31.9a5.33 5.33 0 01-5.32 5.32H16.09a5.33 5.33 0 01-5.32-5.32V16.09a5.34 5.34 0 015.32-5.32zM31.91 9H16.09A7.11 7.11 0 009 16.09v15.82A7.11 7.11 0 0016.09 39h15.82A7.11 7.11 0 0039 31.91V16.09A7.11 7.11 0 0031.91 9zM16.33 24A7.67 7.67 0 1124 31.67 7.67 7.67 0 0116.33 24z" fill="#fff" fill-rule="evenodd"/></svg>
+        <span class="media-body d-flex flex-column typo-text-responsive">
+          <span><a href="" target="_blank">instagram</a></span>
+        </span>
+      </p>
+    </section>
+  </div>
+</div>
+{% endblock %}

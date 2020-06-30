@@ -1,0 +1,156 @@
+.font-family-alt {
+  font-family: $font-family-alt;
+}
+
+
+.h2_5 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+.h2_5 {
+  @include font-size($h2-font-size);
+}
+
+
+.display-5 {
+  @include font-size($display5-size);
+  font-weight: $display5-weight;
+  line-height: $display-line-height;
+}
+
+.display-6 {
+  @include font-size($display6-size);
+  font-weight: $display6-weight;
+  line-height: $display-line-height;
+}
+
+
+.typo-list {
+  @include list-unstyled();
+
+  > li,
+  > div > li {
+    position: relative;
+    min-height: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &::before {
+      display: block;
+      width: 1.25rem;
+      height: 1.25rem;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: .25rem;
+    }
+  }
+
+  &-primary > li::before,
+  &-primary > div > li::before {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+}
+
+
+.typo-list-check-outline {
+  @extend .typo-list;
+
+  > li,
+  > div > li {
+    padding-left: 2.125rem;
+
+    &::before {
+      top: .15rem;
+      content: '';
+      border-radius: 50rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-image: escape-svg($typo-list-check-icon);
+      background-position: center center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.typo-list-responsive {
+  & > li,
+  & > div > li {
+    @include media-breakpoint-down('lg') {
+      padding-left: 1.5rem;
+      min-height: .8125rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding-left: 1.875rem;
+      min-height: 1.25rem;
+    }
+
+    &::before {
+      @include media-breakpoint-down('lg') {
+        width: calc(.8125rem - 1px);
+        height: calc(.8125rem - 1px);
+      }
+
+      @include media-breakpoint-down('sm') {
+        width: calc(1.25rem - 1px);
+        height: calc(1.25rem - 1px);
+      }
+    }
+  }
+}
+
+
+.typo-title-responsive {
+  &.h3 {
+    @include media-breakpoint-down('lg') {
+      @include font-size(1.125rem);
+    }
+
+    @include media-breakpoint-down('sm') {
+      @include font-size(1.25rem);
+      line-height: 1.19;
+    }
+  }
+
+  &.h4 {
+    @include media-breakpoint-down('lg') {
+      @include font-size(.9375rem);
+    }
+
+    @include media-breakpoint-down('sm') {
+      @include font-size(1.25rem);
+      line-height: 1.19;
+    }
+  }
+
+  &.h5 {
+    @include media-breakpoint-down('lg') {
+      @include font-size(.8125rem);
+      line-height: 1.23;
+    }
+
+    @include media-breakpoint-down('sm') {
+      @include font-size(1rem);
+      line-height: 1.25;
+    }
+  }
+}
+
+.typo-text-responsive {
+  @include media-breakpoint-down('lg') {
+    @include font-size(.8125rem);
+    line-height: 1.23;
+  }
+
+  @include media-breakpoint-down('sm') {
+    @include font-size(.9375rem);
+    line-height: normal;
+  }
+}

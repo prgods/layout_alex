@@ -1,0 +1,18 @@
+.content {
+  //min-height: calc(100vh - #{$header-height});
+
+  @include media-breakpoint-down('xl') {
+    padding: $content-padding;
+  }
+
+  @include media-breakpoint-down('lg') {
+    //min-height: calc(100vh - #{$header-height-tablet});
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @include media-breakpoint-down('sm') {
+    //min-height: calc(100vh - #{$header-height-mobile});
+    padding: 1rem;
+  }
+}
